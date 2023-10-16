@@ -1,19 +1,16 @@
 #product-overview {
-    background: url("images/freedom.jpg") left 10% top 20%/cover no-repeat border-box;
+    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
+        url("images/freedom.jpg") left 10% top 10%/cover no-repeat border-box,
+        #ff1b68;
     /* background-image: url("freedom.jpg"); */
     /* background-size: cover; */
     /* background-repeat: no-repeat;
     background-origin: border-box;
     background-clip: border-box; */
-    width: 100vw;
+    width: 100%;
     height: 33vh;
-    margin-top: 2.6rem;
+    margin-top: 2.75rem;
     position: relative;
-}
-
-.section-title {
-    color: #2ddf5c;
-    text-align: center;
 }
 
 #product-overview h1 {
@@ -22,28 +19,27 @@
     bottom: 5%;
     left: 3%;
     position: absolute;
+    font-size: 1.6rem;
 }
 
-.plan__list {
-    width: 80%;
-    margin: auto;
+.section-title {
+    color: #2ddf5c;
     text-align: center;
 }
+
+
 
 .plan {
     background: #d5ffdc;
     text-align: center;
     padding: 1rem;
-    margin: 0.5rem;
-    display: inline-block;
-    width: 30%;
-    vertical-align: middle;
+    margin: 0.5rem 0;
+    width: 100%;
 }
 
 .plan--highlight {
     background: #19b84c;
     color: white;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .plan__annotation {
@@ -93,15 +89,15 @@
 
 .key-feature__list {
     list-style: none;
+    
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
 .key-feature {
-    display: inline-block;
-    width: 30%;
     vertical-align: top;
+    list-style: none;
 }
 
 .key-feature__description {
@@ -174,3 +170,42 @@
     border-color: #ff5454;
 }
 
+@media (min-width: 40rem) {
+    #product-overview {
+        height: 50vh;
+        background-position: 50% 25%;
+    }
+
+    #product-overview h1 {
+        font-size: 3rem;
+    }
+
+    .plan__list {
+        width: 100%;
+        text-align: center;
+    }
+
+    .plan {
+        display: inline-block;
+        margin: 0.5rem;
+        width: 30%;
+        vertical-align: middle;
+        min-width: 13rem;
+        max-width: 25rem;
+    }
+
+    .plan--highlight {
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .key-feature {
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+        max-width: 25rem;
+    }
+}
+
+/* @media (min-width: 60rem) {
+    
+} */

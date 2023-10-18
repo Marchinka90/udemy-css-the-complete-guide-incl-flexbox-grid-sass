@@ -35,6 +35,8 @@ main {
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 200ms linear;
 }
 
 .main-header {
@@ -162,7 +164,8 @@ main {
 }
 
 .mobile-nav {
-    display: none;
+    transform: translateX(-100%);
+    transition: transform 300ms ease-out;
     position: fixed;
     z-index: 101;
     top: 0;
@@ -222,6 +225,8 @@ main {
 
 .open {
     display: block !important; 
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
 @media (min-width: 40rem) {
